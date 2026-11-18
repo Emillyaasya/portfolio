@@ -115,6 +115,7 @@ function App() {
               <div className="hero-links">
                 <a href="mailto:Nemillyaasya@gmail.com" className="link-style">Contact Me ↗</a>
                 <a href="https://www.linkedin.com/in/nur-emillya-asya-806b60338/" target="_blank" rel="noreferrer" className="link-style">LinkedIn ↗</a>
+                <a href="https://drive.google.com/file/d/125FnmQDTQ9MnbcLuBl-8vWG1lBq09p6S/view?usp=drive_link" target="_blank" rel="noreferrer" className="link-style">View Resume ↗</a>
               </div>
             </div>
             <div className="hero-image-container">

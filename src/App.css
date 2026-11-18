@@ -282,7 +282,8 @@ body {
 .hero-links {
   margin-top: 3rem;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
 }
 
 a.link-style {
@@ -873,6 +874,10 @@ a.link-style:hover {
   
   .hero-text {
     align-items: center;
+  }
+
+  .hero-links {
+    justify-content: center;
   }
 
   .hero-image-container {
