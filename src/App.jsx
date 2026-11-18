@@ -4,7 +4,7 @@ import './App.css';
 
 // --- Data ---
 const projectData = [
-  { title: 'Muar Tour Assistance', sub: 'React Web App', desc: 'Developed and deployed a modern tourism web application for Muar using React, Vite, and Netlify. Designed to assist tourists with navigation and local information.', link: 'https://muartourassistance.netlify.app/', image: '/muartour.png' },
+  { title: 'Muar Tour Assistance', sub: 'React Web App', desc: 'Developed and deployed a modern tourism web application for Muar using React, Vite, and Netlify. Designed to assist tourists with navigation and local information.', link: 'https://muartourassistance.vercel.app/', image: '/muartour.png' },
   { title: 'TransactPro', sub: 'Python Data Structures', desc: 'Developed a Python-based banking application using Linked Lists and Stacks to manage transaction histories.', link: 'https://bankingtransaction.lovable.app', image: '/transactpro.jpeg' },
   { title: 'Logic Quest', sub: 'React Web Game', desc: 'Developed an interactive logic puzzle game using React and Vite. The game challenges users with algorithmic thinking and time-based puzzles.', link: 'https://sites.google.com/view/logicquest/home', image: '/logic.png' },
   { title: 'Sumo Zep Battle', sub: 'Robotics & Gamification', desc: 'Designed and built sumo robots for strategic competition, alongside developing a fast-paced digital math game focused on time-distance graphs and simultaneous equations.', link: 'https://sites.google.com/view/sumozepbattle/home', image: '/sumo.png' },
