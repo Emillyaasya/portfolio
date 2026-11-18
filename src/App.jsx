@@ -12,7 +12,6 @@ const projectData = [
   { title: 'Road Safety Dashboard', sub: 'R & Power BI', desc: 'Analysed Pahang Road accident using R and Power BI to identify accident patterns and road safety trends.', link: 'https://github.com/Emillyaasya/Road-Safe-Pahang-/blob/main/README.md', image: '/page3.png' },
   { title: 'Amazon Retail Analytics', sub: 'MongoDB', desc: 'Developed a fully local, MongoDB-based analytics platform with advanced aggregation pipelines.', link: '#', image: null },
   { title: 'FinTech Fraud Detection', sub: 'R Shiny & ML', desc: 'Developed an interactive R Shiny dashboard and ML framework to detect fraudulent transactions.', link: '#', image: null },
-  { title: 'Telco Churn Analysis', sub: 'SAS Viya', desc: 'Developed an interactive SAS Viya dashboard to analyze customer churn patterns.', link: '#', image: null },
 ];
 
 const certificateData = [
