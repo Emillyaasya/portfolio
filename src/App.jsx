@@ -10,9 +10,7 @@ const projectData = [
   { title: 'Sumo Zep Battle', sub: 'Robotics & Gamification', desc: 'Designed and built sumo robots for strategic competition, alongside developing a fast-paced digital math game focused on time-distance graphs and simultaneous equations.', link: 'https://sites.google.com/view/sumozepbattle/home', image: '/sumo.png' },
   { title: 'Money Management System', sub: 'Web Application', desc: 'Developed a web application for university students to track daily expenses, calculate monthly budgets, and determine if their financial balance is ideal.', link: 'https://sites.google.com/view/moneymanagementsystem/page?authuser=0', image: '/money.png' },
   { title: 'Road Safety Dashboard', sub: 'R & Power BI', desc: 'Analysed Pahang Road accident using R and Power BI to identify accident patterns and road safety trends.', link: 'https://github.com/Emillyaasya/Road-Safe-Pahang-/blob/main/README.md', image: '/page3.png' },
-  { title: 'Amazon Retail Analytics', sub: 'MongoDB', desc: 'Developed a fully local, MongoDB-based analytics platform with advanced aggregation pipelines.', link: '#', image: null },
-  { title: 'FinTech Fraud Detection', sub: 'R Shiny & ML', desc: 'Developed an interactive R Shiny dashboard and ML framework to detect fraudulent transactions.', link: '#', image: null },
-  { title: 'Telco Customer Churn Analysis', sub: 'SAS Viya', desc: 'Developed an interactive dashboard to analyze customer churn patterns, revenue loss, and key business metrics. ', link: '#', image: null },
+  { title: 'Telco Customer Churn Analysis', sub: 'SAS Viya', desc: 'Developed an interactive dashboard to analyze customer churn patterns, revenue loss, and key business metrics. ', link: 'https://github.com/Emillyaasya/Customer-Churn-EDA', image: '/churn2.png' },
 ];
 
 const certificateData = [
@@ -81,20 +79,22 @@ function App() {
         </div>
       </div>
 
-      {/* Floating Pill Navigation */}
-      <div className="navbar-wrapper">
-        <nav className="navbar">
-          <div className="nav-brand">NUR EMILLYA ASYA</div>
-          <div className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
-      </div>
+      {/* Floating Pill Navigation — hidden while certificate popup is open */}
+      {!selectedCert && (
+        <div className="navbar-wrapper">
+          <nav className="navbar">
+            <div className="nav-brand">NUR EMILLYA ASYA</div>
+            <div className="nav-links">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#education">Education</a>
+              <a href="#projects">Projects</a>
+              <a href="#certificates">Certificates</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </nav>
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="content">
@@ -272,18 +272,42 @@ function App() {
             </div>
 
             <div className="contact-form-container">
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form
+                action="https://formsubmit.co/nemillyaasya@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New Portfolio WBL / Inquiry Message" />
+                <input type="hidden" name="_captcha" value="true" />
+
                 <div className="form-group">
-                  <label>My name is</label>
-                  <input type="text" placeholder="e.g. Jane Doe" />
+                  <label htmlFor="sender-name">My name is</label>
+                  <input
+                    id="sender-name"
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Jane Doe"
+                    required
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Reach me at</label>
-                  <input type="email" placeholder="email@organization.com" />
+                  <label htmlFor="sender-email">Reach me at</label>
+                  <input
+                    id="sender-email"
+                    type="email"
+                    name="email"
+                    placeholder="email@organization.com"
+                    required
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Your message</label>
-                  <textarea rows="4" placeholder="Share details about the WBL placement, research challenge, or collaboration..."></textarea>
+                  <label htmlFor="sender-message">Your message</label>
+                  <textarea
+                    id="sender-message"
+                    name="message"
+                    rows="4"
+                    placeholder="Share details about the WBL placement, research challenge, or collaboration..."
+                    required
+                  ></textarea>
                 </div>
                 <button type="submit" className="submit-btn">Send Message ↗</button>
               </form>
